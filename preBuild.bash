@@ -2,5 +2,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Upgrade build tools
-python3 -m pip install --upgrade pip setuptools wheel
+# Optional: print versions for debugging
+pythonpython --version || true
+pip --version || true
+
+# Upgrade build tooling to avoid pip/PEP517 metadata issues
