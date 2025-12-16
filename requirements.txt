@@ -8,8 +8,12 @@ ftfy==6.2.3
 regex==2024.7.24
 tqdm==4.66.5
 openai-whisper==20231117
+# --- PyTorch stack (per your request) ---
+# Choose CPU or CUDA 12.1 index in the build step (see below).
 torch==2.2.2
 torchvision==0.17.2
+torchaudio==2.2.2
+
 matplotlib==3.9.2
 scikit-image==0.24.0
 lancedb==0.12.0
@@ -29,3 +33,7 @@ dataclass_wizard==0.22.2
 unstructured[all-docs]
 onnxruntime==1.18.0
 tesseract==0.1.3
+
+# --- ONNX pins to avoid source build and resolver thrash ---
+onnx==1.13.1
+protobuf==3.20.3
