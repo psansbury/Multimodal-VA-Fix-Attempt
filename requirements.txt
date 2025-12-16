@@ -37,3 +37,22 @@ tesseract==0.1.3
 # --- ONNX pins to avoid source build and resolver thrash ---
 onnx==1.13.1
 protobuf==3.20.3
+
+
+# BEFORE installing requirements
+RUN python3 -m pip install --upgrade pip setuptools wheel && \
+    pip install --user --no-cache-dir --prefer-binary \
+      -r /opt/project/build/requirements.txt
+``
+
+# CUDA 12.1 wheels for torch/vision/audio
+RUN python3 -m pip install --upgrade pip setuptools wheel && \
+    pip install --user --no-cache-dir \
+      --index-url https://download.pytorch.org/whl/cu121 \
+
+
+RUN python3 -m pip install --upgrade pip setuptools wheel && \
+    pip install --user --no-cache-dir \
+      --index-url https://download.pytorch.org/whl/cpu \
+      -r /opt/project/build/requirements.txt
+
