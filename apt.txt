@@ -1,4 +1,5 @@
 # apt packages to install should be listed one per line
+cmake
 poppler-utils
 python3-pil
 tesseract-ocr
