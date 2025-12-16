@@ -1,5 +1,9 @@
-#!/bin/bash
 
-RUN python3 -m pip install --upgrade pip setuptools wheel && \
-    pip install --user --no-cache-dir --prefer-binary \
-      -r /opt/project/build/requirements.txt
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Optional: print versions for debugging
+pythonpython --version || true
+pip --version || true
+
+# Upgrade build tooling to avoid pip/PEP517 metadata issues
