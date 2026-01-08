@@ -1,0 +1,4 @@
+torch 2.2.2+cu121 CUDA 12.1
+arch_list ['sm_50', 'sm_60', 'sm_70', 'sm_75', 'sm_80', 'sm_86', 'sm_90']
+name NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU
+available True count 1
