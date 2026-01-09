@@ -1,1 +1,17 @@
 nltk
+
+gradio>=4
+langgraph
+langchain
+
+langchain-nvidia-ai-endpoints
+
+langchain-community
+langchain-core
+
+langchain-text-splitters
+
+langchain-classic
+
+SpeechRecognition
+
