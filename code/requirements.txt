@@ -1,5 +1,23 @@
-nltk
 
+# PyTorch stack for CUDA 12.1 (GPU)
+torch==2.2.2
+torchvision==0.17.2
+torchaudio==2.2.2
+
+# Force ONNX to wheel to avoid source builds
+onnx==1.13.1
+protobuf==3.20.3
+
+# (rest of your project deps)
+# llama-index==0.11.6
+# llama-index-vector-stores-lancedb==0.2.2
+# llama-index# llama-index-multi-modal-llms-openai==0.2.0
+# llama-index-embeddings-clip==0.2.0
+# ftfy==6.2.3
+# regex==2024.7.24
+# tqdm==4.66.5
+jupyterlab>3.0
+uvicorn[standard]
 gradio>=4
 langgraph
 langchain
@@ -15,3 +33,7 @@ langchain-classic
 
 SpeechRecognition
 
+pytubefix
+moviepy
+moviepy
+# system dependency: ffmpeg (installed via apt in Workbench)
