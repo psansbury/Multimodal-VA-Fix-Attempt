@@ -20,3 +20,17 @@ jupyterlab>3.0
 uvicorn[standard]
 gradio>=4
 langgraph
+langchain
+
+langchain-nvidia-ai-endpoints
+
+langchain-community
+langchain-core
+
+langchain-text-splitters
+
+langchain-classic
+
+SpeechRecognition
+
+pytubefix

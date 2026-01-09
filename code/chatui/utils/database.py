@@ -13,14 +13,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import WebBaseLoader, UnstructuredPDFLoader
 from langchain_community.vectorstores import LanceDB
-from langchain.retrievers.multi_vector import MultiVectorRetriever
+from langchain_classic.retrievers.multi_vector import MultiVectorRetriever
 from langchain_nvidia_ai_endpoints import NVIDIAEmbeddings
 from typing import Any, Dict, List, Tuple, Union
 
-from moviepy.editor import VideoFileClip
+from moviepy import VideoFileClip
 from pathlib import Path
 import speech_recognition as sr
 from pytubefix import YouTube

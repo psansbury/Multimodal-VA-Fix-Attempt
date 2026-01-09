@@ -18,7 +18,7 @@ import os
 from typing_extensions import TypedDict
 from typing import List
 
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 from langchain_nvidia_ai_endpoints import ChatNVIDIA
 from langchain_community.tools.tavily_search import TavilySearchResults
