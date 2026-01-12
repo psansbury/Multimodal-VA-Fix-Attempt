@@ -23,8 +23,8 @@ layout:
 environment:
     base:
         registry: nvcr.io
-        image: nvidia/ai-workbench/python-cuda122:1.0.3
-        build_timestamp: "20231214221614"
+        image: nvidia/ai-workbench/python-cuda122:1.0.8
+        build_timestamp: "20250725180946"
         name: Python with CUDA 12.2
         supported_architectures: []
         cuda_version: "12.2"
@@ -33,38 +33,6 @@ environment:
         labels:
             - cuda12.2
         apps:
-            - name: control-panel
-              type: custom
-              class: webapp
-              start_command: cd /project/code/ && PROXY_PREFIX=$PROXY_PREFIX python3 -m chatui
-              health_check_command: curl -f "http://localhost:8080/"
-              stop_command: pkill -f "^python3 -m chatui$"
-              user_msg: ""
-              logfile_path: ""
-              timeout_seconds: 60
-              icon_url: ""
-              webapp_options:
-                autolaunch: true
-                port: "8080"
-                proxy:
-                    trim_prefix: false
-                url: http://localhost:8080/
-            - name: public-chat
-              type: custom
-              class: webapp
-              start_command: cd /project/code/ && PROXY_PREFIX=$PROXY_PREFIX python3 -m chatui_public
-              health_check_command: curl -f "http://localhost:8081/"
-              stop_command: pkill -f "^python3 -m chatui_public"
-              user_msg: ""
-              logfile_path: ""
-              timeout_seconds: 60
-              icon_url: ""
-              webapp_options:
-                autolaunch: true
-                port: "8081"
-                proxy:
-                    trim_prefix: false
-                url: http://localhost:8081/
             - name: jupyterlab
               type: jupyterlab
               class: webapp
@@ -83,8 +51,8 @@ environment:
                 url_command: jupyter lab list | head -n 2 | tail -n 1 | cut -f1 -d' ' | grep -v 'Currently'
         programming_languages:
             - python3
-        icon_url: ""
-        image_version: 1.0.3
+        icon_url: https://workbench.download.nvidia.com/static/img/ai-workbench-icon-rectangle.jpg
+        image_version: 1.0.8
         os: linux
         os_distro: ubuntu
         os_distro_release: "22.04"
@@ -106,9 +74,9 @@ environment:
                 - python3-pip
                 - vim
             - name: pip
-              binary_path: /usr/local/bin/pip
+              binary_path: /usr/bin/pip
               installed_packages:
-                - jupyterlab==4.0.7
+                - jupyterlab==4.3.5
         package_manager_environment:
             name: ""
             target: ""

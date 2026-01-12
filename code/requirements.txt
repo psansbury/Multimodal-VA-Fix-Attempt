@@ -1,41 +1,79 @@
 
+# -------------------------------
 # PyTorch stack for CUDA 12.1 (GPU)
+# -------------------------------
 torch==2.2.2
 torchvision==0.17.2
 torchaudio==2.2.2
 
+# -------------------------------
 # Force ONNX to wheel to avoid source builds
+# -------------------------------
 onnx==1.13.1
 protobuf==3.20.3
 
-# (rest of your project deps)
-# llama-index==0.11.6
-# llama-index-vector-stores-lancedb==0.2.2
-# llama-index# llama-index-multi-modal-llms-openai==0.2.0
+# -------------------------------
+# Core runtime / web / notebooks
+# -------------------------------
+jupyterlab>=3.0
+uvicorn[standard]==0.30.0
+gradio>=4.0
+
+# -------------------------------
+# LangChain stack (pin to 0.2.x family)
+# -------------------------------
+langchain==0.2.14
+langchain-core==0.2.41
+langchain-community==0.2.12
+langchain-text-splitters==0.2.2
+langchain-classic==0.0.2
+langgraph==0.2.39
+langchain-nvidia-ai-endpoints==0.3.6
+
+# -------------------------------
+# LlamaIndex stack (pin to 0.14.x for 'llama_index.core...' imports)
+# -------------------------------
+llama-index==0.14.12
+llama-index-core==0.14.12
+llama-index-cli==0.5.3
+llama-index-llms-openai==0.6.12
+llama-index-embeddings-openai==0.5.1
+llama-index-readers-file==0.5.6
+llama-index-indices-managed-llama-cloud==0.9.4
+llama-cloud==0.1.35
+llama-cloud-services==0.6.54
+llama-parse==0.6.54
+llama-index-readers-llama-parse==0.5.1
+llama-index-workflows==2.11.7
+llama-index-instrumentation==0.4.2
+# If you need CLIP embeddings:
 # llama-index-embeddings-clip==0.2.0
-# ftfy==6.2.3
-# regex==2024.7.24
-# tqdm==4.66.5
-jupyterlab>3.0
-uvicorn[standard]
-gradio>=4
-langgraph
-langchain
 
-langchain-nvidia-ai-endpoints
+# -------------------------------
+# OpenAI / HTTP / misc utils
+# -------------------------------
+openai==1.53.0
+httpx==0.28.1
+requests==2.32.3
+tiktoken==0.12.0
+python-dotenv==1.0.1
+pydantic==2.7.4
+pydantic-core==2.18.4
 
-langchain-community
-langchain-core
+# -------------------------------
+# Media / NLP
+# -------------------------------
+moviepy==2.2.1
+nltk==3.9.1
+SpeechRecognition==3.10.4
+pillow==10.4.0
 
-langchain-text-splitters
-
-langchain-classic
-moviepy
-nltk
-
-SpeechRecognition
-
-pytubefix
-moviepy
-moviepy
-# system dependency: ffmpeg (installed via apt in Workbench)
+# -------------------------------
+# Data / parsing helpers
+# -------------------------------
+pandas==2.2.2
+numpy==1.26.4
+regex==2024.7.24
+tqdm==4.66.5
+ftfy==6.2.3
+pypdf==4.3.1

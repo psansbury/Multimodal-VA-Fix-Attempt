@@ -38,3 +38,4 @@ moviepy
 moviepy
 # system dependency: ffmpeg (installed via apt in Workbench)
 nltk
+llama-index
