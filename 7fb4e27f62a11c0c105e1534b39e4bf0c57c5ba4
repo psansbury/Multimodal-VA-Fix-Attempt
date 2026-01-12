@@ -1,0 +1,1 @@
+{"schema":"v1","records":[{"type":"ENVIRONMENT","operation":"CREATED","data":[{"data":"Added packages through pip package manager: llama-index","mime":"text/plain"}],"important":null},{"type":"PROJECT","operation":"UPDATED","data":[{"data":"Updated Base Environment to 'nvidia/ai-workbench/python-cuda122:1.0.8'","mime":"text/plain"}],"important":null}]}
