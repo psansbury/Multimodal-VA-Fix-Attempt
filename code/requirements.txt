@@ -30,6 +30,8 @@ langchain-core
 langchain-text-splitters
 
 langchain-classic
+moviepy
+nltk
 
 SpeechRecognition
 
