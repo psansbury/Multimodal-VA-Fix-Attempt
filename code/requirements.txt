@@ -7,7 +7,7 @@ torchvision==0.17.2
 torchaudio==2.2.2
 
 # -------------------------------
-# Force ONNX to wheel to avoid source builds
+# ONNX and protobuf
 # -------------------------------
 onnx==1.13.1
 protobuf==3.20.3
@@ -20,7 +20,7 @@ uvicorn[standard]==0.30.0
 gradio>=4.0
 
 # -------------------------------
-# LangChain stack (pin to 0.2.x family)
+# LangChain stack
 # -------------------------------
 langchain==0.2.14
 langchain-core==0.2.41
@@ -31,7 +31,7 @@ langgraph==0.2.39
 langchain-nvidia-ai-endpoints==0.3.6
 
 # -------------------------------
-# LlamaIndex stack (pin to 0.14.x for 'llama_index.core...' imports)
+# LlamaIndex stack
 # -------------------------------
 llama-index==0.14.12
 llama-index-core==0.14.12
@@ -46,8 +46,6 @@ llama-parse==0.6.54
 llama-index-readers-llama-parse==0.5.1
 llama-index-workflows==2.11.7
 llama-index-instrumentation==0.4.2
-# If you need CLIP embeddings:
-# llama-index-embeddings-clip==0.2.0
 
 # -------------------------------
 # OpenAI / HTTP / misc utils
