@@ -1,117 +1,52 @@
 
-# -------------------------------
-# PyTorch stack for CUDA 12.1 (GPU)
-# -------------------------------
-torch==2.2.2
-torchvision==0.17.2
-torchaudio==2.2.2
+# =========================================
+# Core LLM / orchestration
+# =========================================
+transformers>=4.40
+tokenizers>=0.15
+accelerate>=0.28
 
-# -------------------------------
-# ONNX and protobuf
-# -------------------------------
-onnx==1.13.1
-protobuf==3.20.3
+# =========================================
+# LLM frameworks / pipelines
+# (choose combinations you actually import)
+# =========================================
+langchain>=0.1.17
+langchain-community>=0.0.34
 
-# -------------------------------
-# Core runtime / web / notebooks
-# -------------------------------
-jupyterlab>=3.0
-uvicorn[standard]==0.30.0
-gradio>=4.0
+# Optional (only if using LangGraph-style flows)
+langgraph>=0.0.48
 
-# -------------------------------
-# LangChain stack
-# -------------------------------
-langchain==0.2.14
-langchain-core==0.2.41
-langchain-community==0.2.12
-langchain-text-splitters==0.2.2
-langchain-classic==0.0.2
-langgraph==0.2.39
-langchain-nvidia-ai-endpoints==0.3.6
+# =========================================
+# Embeddings + vector stores (RAG)
+# =========================================
+sentence-transformers>=2.6
+faiss-cpu>=1.8
+# chromadb>=0.4.24   # alternative to FAISS
 
-# -------------------------------
-# LlamaIndex stack
-# -------------------------------
-llama-index==0.14.12
-llama-index-core==0.14.12
-llama-index-cli==0.5.3
-llama-index-llms-openai==0.6.12
-llama-index-embeddings-openai==0.5.1
-llama-index-readers-file==0.5.6
-llama-index-indices-managed-llama-cloud==0.9.4
-llama-cloud==0.1.35
-llama-cloud-services==0.6.54
-llama-parse==0.6.54
-llama-index-readers-llama-parse==0.5.1
-llama-index-workflows==2.11.7
-llama-index-instrumentation==0.4.2
+# =========================================
+# OCR / vision helpers (optional)
+# =========================================
+pytesseract>=0.3.10
+Pillow>=10.0
 
-# -------------------------------
-# OpenAI / HTTP / misc utils
-# -------------------------------
-openai==1.53.0
-httpx==0.28.1
-requests==2.32.3
-tiktoken==0.12.0
-python-dotenv==1.0.1
-pydantic==2.7.4
-pydantic-core==2.18.4
+# =========================================
+# Data handling
+# =========================================
+numpy>=1.26
+pandas>=2.1
 
-# -------------------------------
-# Media / NLP
-# -------------------------------
-moviepy==2.2.1
-nltk==3.9.1
-SpeechRecognition==3.10.4
-pillow==10.4.0
+# =========================================
+# Web / UI  (choose ONE)
+# =========================================
+fastapi>=0.110
+uvicorn>=0.27
 
-# -------------------------------
-# Data / parsing helpers
-# -------------------------------
-pandas==2.2.2
-numpy==1.26.4
-regex==2024.7.24
-tqdm==4.66.5
-ftfy==6.2.3
-pypdf==4.3.1
-torch==2.2.2
-torchvision==0.17.2
-torchaudio==2.2.2
-transformers==4.40.2
-accelerate==0.28.0
-opencv-python
-numpy
-pydantic
-fastapi
-uvicorn
-torch==2.2.2
-torchvision==0.17.2
-torchaudio==2.2.2
-transformers==4.40.2
-accelerate==0.28.0
-opencv-python
-numpy
-pydantic
-fastapi
-uvicorn
-torch==2.2.2
-torchvision==0.17.2
-torchaudio==2.2.2
-transformers==4.40.2
-accelerate==0.28.0
-opencv-python
-numpy
-pydantic
-fastapi
-uvicorn
-torch==2.2.2
-torchvision==0.17.2
-torchaudio==2.2.2
-transformers==4.40.2
-accelerate==0.28.0
-opencv-python
-numpy
-pydantic
-fastapi
-uvicorn
+# OR — if this project exposes a UI:
+# gradio==4.43.0
+
+# =========================================
+# Utilities
+# =========================================
+python-dotenv>=1.0
+pydantic>=2.7
+requests>=2.31
